@@ -143,5 +143,5 @@ if __name__ == '__main__':
         cm = confusion_matrix(all_labels, all_preds)
         disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=[0, 1])
         disp.plot()
-        plt.savefig('lab8/confusion_matrix.png')
+        plt.savefig('lab8/task8_confusion_matrix.png')
         plt.close()
