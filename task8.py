@@ -137,7 +137,7 @@ if __name__ == '__main__':
         plt.xlabel('Epoch')
         plt.ylabel('Loss')
         plt.legend()
-        plt.savefig('lab8/task2_loss_plot.png')
+        plt.savefig('lab8/task8_loss_plot.png')
 
         # Create confusion matrix
         cm = confusion_matrix(all_labels, all_preds)
