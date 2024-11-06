@@ -136,20 +136,22 @@ if __name__ == '__main__':
         print(f'Epoch: {epoch}, Train Loss CE: {train_loss_ce / len(trainloader):.4f}, Test Loss CE: {test_loss_ce / len(testloader):.4f}, Test Accuracy CE: {correct_ce / total:.4f}')
         print(f'Epoch: {epoch}, Train Loss NLL: {train_loss_nll / len(trainloader):.4f}, Test Loss NLL: {test_loss_nll / len(testloader):.4f}, Test Accuracy NLL: {correct_nll / total:.4f}, Time: {(time.time_ns() - t) / 1e9:.2f}s')
 
+        # Create the loss plot for CrossEntropyLoss
+        plt.plot(train_losses_ce, label='Train Loss CE')
+        plt.plot(test_losses_ce, label='Test Loss CE')
+        plt.xlabel('Epoch')
+        plt.ylabel('Loss')
+        plt.legend()
+        plt.savefig('lab8/task5_loss_plot_ce.png')
+        
+        # Create the loss plot for NLLLoss
+        plt.plot(train_losses_nll, label='Train Loss NLL')
+        plt.plot(test_losses_nll, label='Test Loss NLL')
+        plt.xlabel('Epoch')
+        plt.ylabel('Loss')
+        plt.legend()
+        plt.savefig('lab8/task5_loss_plot_nll.png')
+
     print('Training complete')
     
-    # Create the loss plot for CrossEntropyLoss
-    plt.plot(train_losses_ce, label='Train Loss CE')
-    plt.plot(test_losses_ce, label='Test Loss CE')
-    plt.xlabel('Epoch')
-    plt.ylabel('Loss')
-    plt.legend()
-    plt.savefig('lab8/task5_loss_plot_ce.png')
     
-    # Create the loss plot for NLLLoss
-    plt.plot(train_losses_nll, label='Train Loss NLL')
-    plt.plot(test_losses_nll, label='Test Loss NLL')
-    plt.xlabel('Epoch')
-    plt.ylabel('Loss')
-    plt.legend()
-    plt.savefig('lab8/task5_loss_plot_nll.png')
