@@ -4,7 +4,7 @@ from picamera2 import Picamera2
 import numpy as np
 
 # Set up directories
-data_directory = 'data'
+data_directory = 'lab8/data'
 folders = ['train/0', 'train/1', 'test/0', 'test/1']
 for folder in folders:
     os.makedirs(os.path.join(data_directory, folder), exist_ok=True)
